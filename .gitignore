@@ -4,3 +4,6 @@ pyc
 /.settings
 .DS_Store
 
+.idea/
+morpion.iml
+src/grille.pyc
