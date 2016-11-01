@@ -6,6 +6,7 @@ from grille import Grille
 
 def game():
     print " tic tac toe "
+    print "coucou tout le monde"
 
     maGrille = Grille() 
 
