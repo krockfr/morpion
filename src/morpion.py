@@ -5,7 +5,7 @@ from grille import Grille
 
 
 def game():
-    print "morpion"
+    print " tic tac toe "
 
     maGrille = Grille() 
 
