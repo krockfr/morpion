@@ -1,22 +1,17 @@
-
 # -*- coding=utf-8 -*-
 from grille import Grille
 
 
-
 def game():
     print " tic tac toe "
-    print "coucou tout le monde"
 
-    maGrille = Grille() 
-
-
+    maGrille = Grille()
 
     while 1:
         print " "
         maGrille.afficher()
         print " "
-        
+
         print " "
         print "joueur croix :"
         joueur_croix_ligne = input("ligne >> ")
@@ -28,11 +23,11 @@ def game():
             maGrille.afficher()
             print " "
             break
-        
+
         print " "
         maGrille.afficher()
         print " "
-        
+
         print " "
         print "joueur rond :"
         joueur_rond_ligne = input("ligne >> ")
@@ -44,11 +39,11 @@ def game():
             maGrille.afficher()
             print " "
             break
-        
+
         print " "
         maGrille.afficher()
         print " "
-        
+
 
 if __name__ == '__main__':
     game()
