@@ -89,7 +89,7 @@ class Grille:
             gagnant = "croix"
 
         if self.grille[0][0] == "O" and self.grille[0][1] == "O" and self.grille[0][2] == "O":
-            gagnant = ""
+            gagnant = "rond"
 
         if self.grille[1][0] == "O" and self.grille[1][1] == "O" and self.grille[1][2] == "O":
             gagnant = "rond"
