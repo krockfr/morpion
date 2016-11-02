@@ -5,6 +5,7 @@ from pygame.locals import *
 from grille import Grille
 
 
+
 class Game:
 
 
@@ -13,6 +14,7 @@ class Game:
         self.gagne = False
         self.grille = Grille()
         self.joueur_actif = "rond"
+
 
         print "Nouvelle partie"
         self.creer_fenetre()
@@ -95,12 +97,55 @@ class Game:
                     self.grille.jouer(self.joueur_actif, 2, 2)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
+                print "touche a"
+                self.grille.jouer(self.joueur_actif, 0, 0)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
+                print "touche z"
+                self.grille.jouer(self.joueur_actif, 0, 1)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
+                print "touche e"
+                self.grille.jouer(self.joueur_actif, 0, 2)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
+                print "touche q"
+                self.grille.jouer(self.joueur_actif, 1, 0)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
+                print "touche s"
+                self.grille.jouer(self.joueur_actif, 1, 1)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
+                print "touche d"
+                self.grille.jouer(self.joueur_actif, 1, 2)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
+                print "touche w"
+                self.grille.jouer(self.joueur_actif, 2, 0)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
+                print "touche x"
+                self.grille.jouer(self.joueur_actif, 2, 1)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
+                print "touche c"
+                self.grille.jouer(self.joueur_actif, 2, 2)
+                self.modifie_joueur_actif()
+                self.grille.afficher()
 
     def run(self):
         self.fenetre.blit(self.fond, (0, 0))
         self.gestion_evenements()
-
-
 
         for ligne in xrange(3):
             for colonne in xrange(3):
