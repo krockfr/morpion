@@ -9,23 +9,23 @@ class Grille:
         self.grille = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
     def afficher(self):
-        for ligne in xrange(0, 3):
-            print "| ",
-            for colonne in xrange(0, 3):
-                print str(self.grille[ligne][colonne]) + " | ",
+        for ligne in range(0, 3):
+            print("| ")
+            for colonne in range(0, 3):
+                print (str(self.grille[ligne][colonne]) + " | ")
 
-            print " "
+            print(" ")
 
     # symbole: croix ou rond
     def jouer(self, symbole, ligne, colonne):
-        print symbole
+        print(symbole)
         success = True
         # test des paramètres
 
         if (symbole != "rond" and symbole != "croix") or (ligne > 2 or ligne < 0) or (colonne > 2 or colonne < 0):
-            print " "
-            print "case prise => REJOUER"
-            print " "
+            print(" ")
+            print("case prise => REJOUER")
+            print(" ")
             success = False
         else:
 
@@ -44,9 +44,9 @@ class Grille:
 
         if self.grille[ligne][colonne] != 0:
             success = False
-            print " "
-            print "case déjà prise"
-            print " "
+            print(" ")
+            print("case déjà prise")
+            print(" ")
 
         return success
 

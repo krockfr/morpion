@@ -16,7 +16,7 @@ class Game:
         self.joueur_actif = "rond"
 
 
-        print "Nouvelle partie"
+        print ("Nouvelle partie")
         self.creer_fenetre()
         self.load_assets()
 
@@ -53,92 +53,74 @@ class Game:
                 self.continuer = False
             if event.type == KEYDOWN and self.gagne == False:
                 if event.key == K_a:
-                    print "touche a"
                     self.grille.jouer(self.joueur_actif, 0, 0)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_z:
-                    print "touche z"
                     self.grille.jouer(self.joueur_actif, 0, 1)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_e:
-                    print "touche e"
                     self.grille.jouer(self.joueur_actif, 0, 2)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_q:
-                    print "touche q"
                     self.grille.jouer(self.joueur_actif, 1, 0)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_s:
-                    print "touche s"
                     self.grille.jouer(self.joueur_actif, 1, 1)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_d:
-                    print "touche d"
                     self.grille.jouer(self.joueur_actif, 1, 2)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_w:
-                    print "touche w"
                     self.grille.jouer(self.joueur_actif, 2, 0)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_x:
-                    print "touche x"
                     self.grille.jouer(self.joueur_actif, 2, 1)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
                 if event.key == K_c:
-                    print "touche c"
                     self.grille.jouer(self.joueur_actif, 2, 2)
                     self.modifie_joueur_actif()
                     self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
-                print "touche a"
                 self.grille.jouer(self.joueur_actif, 0, 0)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
-                print "touche z"
                 self.grille.jouer(self.joueur_actif, 0, 1)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 0 and event.pos[1] < 200 and self.gagne == False:
-                print "touche e"
                 self.grille.jouer(self.joueur_actif, 0, 2)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
-                print "touche q"
                 self.grille.jouer(self.joueur_actif, 1, 0)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
-                print "touche s"
                 self.grille.jouer(self.joueur_actif, 1, 1)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 200 and event.pos[1] < 400 and self.gagne == False:
-                print "touche d"
                 self.grille.jouer(self.joueur_actif, 1, 2)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 0 and event.pos[0] < 200 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
-                print "touche w"
                 self.grille.jouer(self.joueur_actif, 2, 0)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 200 and event.pos[0] < 400 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
-                print "touche x"
                 self.grille.jouer(self.joueur_actif, 2, 1)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
             if event.type == MOUSEBUTTONDOWN and event.button == 1 and event.pos[0] > 400 and event.pos[0] < 600 and event.pos[1] > 400 and event.pos[1] < 600 and self.gagne == False:
-                print "touche c"
                 self.grille.jouer(self.joueur_actif, 2, 2)
                 self.modifie_joueur_actif()
                 self.grille.afficher()
@@ -147,15 +129,15 @@ class Game:
         self.fenetre.blit(self.fond, (0, 0))
         self.gestion_evenements()
 
-        for ligne in xrange(3):
-            for colonne in xrange(3):
+        for ligne in range(3):
+            for colonne in range(3):
                 if self.grille.grille[ligne][colonne] == "X":
                     self.fenetre.blit(self.croix, [colonne*200, ligne*200])
                 if self.grille.grille[ligne][colonne] == "O":
                     self.fenetre.blit(self.rond, [colonne*200, ligne*200])
 
         if self.gagne == True:
-            print self.grille.verifier_gagner()
+            print(self.grille.verifier_gagner())
 
 
         pygame.display.flip()
